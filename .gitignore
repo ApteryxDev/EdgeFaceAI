@@ -1,0 +1,46 @@
+# macOS and Xcode local state
+.DS_Store
+xcuserdata/
+*.xcuserstate
+DerivedData/
+.build/
+# Local credentials
+.env
+.env.*
+*.pem
+*.p12
+*.mobileprovision
+# Model binaries and training outputs
+*.mlpackage/
+*.mlmodelc/
+*.mlmodel
+*.onnx
+*.pt
+*.pth
+Training/runs/
+Training/splits/
+.torch-cache/
+# Private input data and individual results
+*.jpg
+*.jpeg
+*.png
+*.heic
+*.HEIC
+*.mp4
+Resources/**/manifest.json
+Resources/**/expected.json
+Resources/**/expression-expected.json
+Resources/**/age-interval-calibration.json
+private-data/
+Evidence/
+*.docx
+# Python environments
+.venv/
+venv/
+__pycache__/
+*.pyc
+.ipynb_checkpoints/
+
+# Public diagrams contain no participant photographs or individual records
+!docs/figures/method.png
+!docs/figures/final20-agreement.png

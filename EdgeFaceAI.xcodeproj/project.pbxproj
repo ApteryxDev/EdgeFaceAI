@@ -1,0 +1,281 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 56;
+	objects = {
+
+/* Begin PBXBuildFile section */
+000000000000000000000341 = {isa = PBXBuildFile; fileRef = 000000000000000000000340; };
+		000000000000000000000014 /* EdgeFaceApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 00000000000000000000000A /* EdgeFaceApp.swift */; };
+		000000000000000000000015 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 00000000000000000000000B /* ContentView.swift */; };
+		000000000000000000000016 /* FacePipeline.swift in Sources */ = {isa = PBXBuildFile; fileRef = 00000000000000000000000C /* FacePipeline.swift */; };
+000000000000000000000138 = {isa = PBXBuildFile; fileRef = 00000000000000000000012E; };
+0000000000000000000001A1 = {isa = PBXBuildFile; fileRef = 0000000000000000000001A0; };
+0000000000000000000001B1 = {isa = PBXBuildFile; fileRef = 0000000000000000000001B0; };
+0000000000000000000001C1 = {isa = PBXBuildFile; fileRef = 0000000000000000000001C0; };
+0000000000000000000001D1 = {isa = PBXBuildFile; fileRef = 0000000000000000000001D0; };
+0000000000000000000001E1 = {isa = PBXBuildFile; fileRef = 0000000000000000000001E0; };
+0000000000000000000001F1 = {isa = PBXBuildFile; fileRef = 0000000000000000000001F0; };
+000000000000000000000211 = {isa = PBXBuildFile; fileRef = 000000000000000000000210; };
+000000000000000000000221 = {isa = PBXBuildFile; fileRef = 000000000000000000000220; };
+000000000000000000000231 = {isa = PBXBuildFile; fileRef = 000000000000000000000230; };
+000000000000000000000241 = {isa = PBXBuildFile; fileRef = 000000000000000000000240; };
+000000000000000000000251 = {isa = PBXBuildFile; fileRef = 000000000000000000000250; };
+000000000000000000000261 = {isa = PBXBuildFile; fileRef = 000000000000000000000260; };
+/* End PBXBuildFile section */
+
+/* Begin PBXFileReference section */
+000000000000000000000340 = {isa = PBXFileReference; lastKnownFileType = folder; path = "Resources/InternetCandidates"; sourceTree = "<group>"; };
+		00000000000000000000000A /* EdgeFaceApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EdgeFaceApp.swift; sourceTree = "<group>"; };
+		00000000000000000000000B /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
+		00000000000000000000000C /* FacePipeline.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FacePipeline.swift; sourceTree = "<group>"; };
+		00000000000000000000001E /* EdgeFaceAI.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; path = EdgeFaceAI.app; sourceTree = BUILT_PRODUCTS_DIR; };
+00000000000000000000012C = {isa = PBXFileReference; lastKnownFileType = file.mlmodel; path = AgeClassifier.mlmodel; sourceTree = "<group>"; };
+00000000000000000000012D = {isa = PBXFileReference; lastKnownFileType = file.mlmodel; path = GenderClassifier.mlmodel; sourceTree = "<group>"; };
+00000000000000000000012E = {isa = PBXFileReference; lastKnownFileType = file.mlmodel; path = ExpressionClassifier.mlmodel; sourceTree = "<group>"; };
+0000000000000000000001A0 = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LiveCamera.swift; sourceTree = "<group>"; };
+0000000000000000000001B0 = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FaceLandmarks.swift; sourceTree = "<group>"; };
+0000000000000000000001C0 = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FaceAlignment.swift; sourceTree = "<group>"; };
+0000000000000000000001D0 = {isa = PBXFileReference; lastKnownFileType = folder.mlpackage; path = FastFaceAttributes.mlpackage; sourceTree = "<group>"; };
+0000000000000000000001E0 = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "FACESDevelopment.swift"; sourceTree = "<group>"; };
+0000000000000000000001F0 = {isa = PBXFileReference; lastKnownFileType = folder; path = "Resources/FACESDevelopment"; sourceTree = "<group>"; };
+000000000000000000000210 = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "DevelopmentModels.swift"; sourceTree = "<group>"; };
+000000000000000000000220 = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "DatasetComparison.swift"; sourceTree = "<group>"; };
+000000000000000000000230 = {isa = PBXFileReference; lastKnownFileType = folder; path = "Resources/UTKDevelopment"; sourceTree = "<group>"; };
+000000000000000000000240 = {isa = PBXFileReference; lastKnownFileType = folder.mlpackage; path = StudentAttributes.mlpackage; sourceTree = "<group>"; };
+000000000000000000000250 = {isa = PBXFileReference; lastKnownFileType = folder; path = "Resources/ConversionFixtures"; sourceTree = "<group>"; };
+000000000000000000000260 = {isa = PBXFileReference; lastKnownFileType = folder.mlpackage; path = OpenCVExpression.mlpackage; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		000000000000000000000033 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		000000000000000000000028 = {
+			isa = PBXGroup;
+			children = (
+000000000000000000000250,
+000000000000000000000230,
+000000000000000000000340,
+0000000000000000000001F0,
+				000000000000000000000029 /* App */,
+				00000000000000000000002A /* Products */,
+				00000000000000000000002B /* Models */,
+			);
+			sourceTree = "<group>";
+		};
+		000000000000000000000029 /* App */ = {
+			isa = PBXGroup;
+			children = (
+000000000000000000000220,
+000000000000000000000210,
+0000000000000000000001E0,
+0000000000000000000001C0,
+0000000000000000000001B0,
+0000000000000000000001A0,
+				00000000000000000000000A /* EdgeFaceApp.swift */,
+				00000000000000000000000B /* ContentView.swift */,
+				00000000000000000000000C /* FacePipeline.swift */,
+			);
+			path = App;
+			sourceTree = "<group>";
+		};
+		00000000000000000000002A /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				00000000000000000000001E /* EdgeFaceAI.app */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		00000000000000000000002B /* Models */ = {
+			isa = PBXGroup;
+			children = (
+000000000000000000000260,
+000000000000000000000240,
+0000000000000000000001D0,
+00000000000000000000012C,
+00000000000000000000012D,
+00000000000000000000012E,
+			);
+			path = Models;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		00000000000000000000003C /* EdgeFaceAI */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 000000000000000000000047 /* Build configuration list for PBXNativeTarget "EdgeFaceAI" */;
+			buildPhases = (
+				000000000000000000000032 /* Sources */,
+				000000000000000000000033 /* Frameworks */,
+				000000000000000000000034 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = EdgeFaceAI;
+			productName = EdgeFaceAI;
+			productReference = 00000000000000000000001E /* EdgeFaceAI.app */;
+			productType = "com.apple.product-type.application";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		000000000000000000000001 /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				LastUpgradeCheck = 2700;
+			};
+			buildConfigurationList = 000000000000000000000046 /* Build configuration list for PBXProject "EdgeFaceAI" */;
+			compatibilityVersion = "Xcode 14.0";
+			developmentRegion = en;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+			);
+			mainGroup = 000000000000000000000028;
+			productRefGroup = 00000000000000000000002A /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				00000000000000000000003C /* EdgeFaceAI */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		000000000000000000000034 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+000000000000000000000251,
+000000000000000000000231,
+000000000000000000000341,
+0000000000000000000001F1,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		000000000000000000000032 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+000000000000000000000221,
+000000000000000000000211,
+0000000000000000000001E1,
+000000000000000000000261,
+000000000000000000000241,
+0000000000000000000001D1,
+0000000000000000000001C1,
+0000000000000000000001B1,
+0000000000000000000001A1,
+000000000000000000000138,
+				000000000000000000000014 /* EdgeFaceApp.swift in Sources */,
+				000000000000000000000015 /* ContentView.swift in Sources */,
+				000000000000000000000016 /* FacePipeline.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin XCBuildConfiguration section */
+		000000000000000000000050 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				CLANG_ENABLE_MODULES = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 17.0;
+				SDKROOT = iphoneos;
+				SWIFT_VERSION = 5.0;
+                SWIFT_ENABLE_EXPLICIT_MODULES = NO;
+                CLANG_ENABLE_EXPLICIT_MODULES = NO;
+			};
+			name = Debug;
+		};
+		000000000000000000000051 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				CLANG_ENABLE_MODULES = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 17.0;
+				SDKROOT = iphoneos;
+				SWIFT_VERSION = 5.0;
+                SWIFT_ENABLE_EXPLICIT_MODULES = NO;
+                CLANG_ENABLE_EXPLICIT_MODULES = NO;
+			};
+			name = Release;
+		};
+		000000000000000000000052 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = "";
+				GENERATE_INFOPLIST_FILE = YES;
+                INFOPLIST_KEY_NSCameraUsageDescription = "Use the camera for live facial-attribute predictions on this device.";
+                INFOPLIST_KEY_UISupportedInterfaceOrientations = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight UIInterfaceOrientationPortraitUpsideDown";
+				INFOPLIST_KEY_CFBundleDisplayName = "EdgeFace AI";
+				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
+				PRODUCT_BUNDLE_IDENTIFIER = edu.student.edgefaceai;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_EMIT_LOC_STRINGS = YES;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Debug;
+		};
+		000000000000000000000053 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = "";
+				GENERATE_INFOPLIST_FILE = YES;
+                INFOPLIST_KEY_NSCameraUsageDescription = "Use the camera for live facial-attribute predictions on this device.";
+                INFOPLIST_KEY_UISupportedInterfaceOrientations = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight UIInterfaceOrientationPortraitUpsideDown";
+				INFOPLIST_KEY_CFBundleDisplayName = "EdgeFace AI";
+				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
+				PRODUCT_BUNDLE_IDENTIFIER = edu.student.edgefaceai;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_EMIT_LOC_STRINGS = YES;
+				SWIFT_OPTIMIZATION_LEVEL = "-O";
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		000000000000000000000046 /* Build configuration list for PBXProject "EdgeFaceAI" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				000000000000000000000050 /* Debug */,
+				000000000000000000000051 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		000000000000000000000047 /* Build configuration list for PBXNativeTarget "EdgeFaceAI" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				000000000000000000000052 /* Debug */,
+				000000000000000000000053 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = 000000000000000000000001 /* Project object */;
+}
