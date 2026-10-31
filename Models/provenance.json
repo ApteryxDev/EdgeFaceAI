@@ -1,0 +1,26 @@
+[
+  {
+    "file": "AgeClassifier.mlmodel",
+    "bytes": 45661571,
+    "sha256": "287b53ed2ad17bc3e835a971f46fafa7baa89b4a270a62790cfa6a0f989106f7",
+    "source": "https://drive.google.com/file/d/1PLkI4Jyg086JlvTzwHHI5EbGWgJI-Atv/view",
+    "license_metadata": "Unknown",
+    "status": "development integration only; source parity and study mapping not verified"
+  },
+  {
+    "file": "GenderClassifier.mlmodel",
+    "bytes": 45649226,
+    "sha256": "772eacfbeadb58ef919220ac93b344e75957dcbfa1602a6c777ac2b81a10fdd8",
+    "source": "https://drive.google.com/file/d/1IxU0E1EDjuL-sbY3wd5Wh6BsXTbYTScb/view",
+    "license_metadata": "Unknown",
+    "status": "development integration only; source parity and study mapping not verified"
+  },
+  {
+    "file": "ExpressionClassifier.mlmodel",
+    "bytes": 498032111,
+    "sha256": "e6257f7f790319924c51ab683d619e193cb4f27695ab594c7e1d4787c80b1db5",
+    "source": "https://drive.google.com/file/d/1ElCJvnEvhtIxZkyEzVUAFPJAMgyBXo57/view",
+    "license_metadata": "Unknown",
+    "status": "development integration only; source parity and study mapping not verified"
+  }
+]
