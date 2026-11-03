@@ -1,0 +1,29 @@
+{
+  "model": "fastface-large-128",
+  "github": "https://github.com/iFurySt/fastface",
+  "github_commit": "cd8b24ce3de4f967332b9a7613e047bfe37368a7",
+  "weights_repository": "https://huggingface.co/iFurySt/fastface",
+  "weights_commit": "15240f03bb257385305e5985e04e6d2477a242fa",
+  "source_checkpoint_sha256": "61ac5a26703c71a0c1a11f5174c578e87f2144f9e270e8ab86ebf0518017e824",
+  "source_onnx_sha256": "359532121277eed67423c91b1b68eb45fbb80e2f6172ce0605da423afc6dced8",
+  "coreml_files": {
+    "Manifest.json": "c9ae749f67919c5d7a37215e378ff643de76eb2c654db7b96c048717d9826d12",
+    "Data/com.apple.CoreML/model.mlmodel": "9a9c2a369bf4538e01fb3b83964a7e51aa3a1fe2d8936603f9fcf9ddf1d4a04b",
+    "Data/com.apple.CoreML/weights/weight.bin": "a4dcbc4e3123c05834a2dd1e06e57dc57d4bb19851b6df9713d870a1399aab2f"
+  },
+  "license": "Apache-2.0 per source code and model release; dataset terms also apply",
+  "input": "aligned RGB 128x128, image scale 1/255 and embedded per-channel ImageNet normalization",
+  "outputs": {
+    "estimated_age": "expected age over 0..100 bins",
+    "gender_probabilities": "[female,male] after softmax"
+  },
+  "conversion": {
+    "torch": "2.7.0",
+    "torchvision": "0.22.0",
+    "coremltools": "9.0",
+    "minimum_ios": "17.0",
+    "precision": "FP32"
+  },
+  "alignment": "five-point similarity, Vision eye/nose centroids and lip extrema; UniFace reference128; detector differs from source RetinaFace",
+  "verification": "four synthetic-input numerical conversion tests passed; not a face-accuracy result; iPhone accuracy pending"
+}
