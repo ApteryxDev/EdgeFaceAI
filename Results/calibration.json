@@ -1,0 +1,7 @@
+{
+  "calibration_examples": 2324,
+  "temperature": 1.5995694398880005,
+  "age_interval_radius_years": 8.773700714111328,
+  "target_coverage": 0.8,
+  "meaning": "Approximation against noisy dataset age labels, not verified biological age; empirical test coverage must be reported."
+}
