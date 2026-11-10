@@ -1,0 +1,1 @@
+Local authorised resources are required here. Participant images, reference manifests and individual face-analysis records are not published. See the repository README for the required data and model setup.
