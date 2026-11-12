@@ -1,0 +1,484 @@
+{
+  "scope": "final20 frozen mixed-source screen-rephotography experiment; source-defined stock age groups, unknown numeric stock ages; policy timing descriptive single runs",
+  "runs": {
+    "faces-student-cpu": {
+      "selected": 72,
+      "successful": 72,
+      "failed": 0,
+      "models": [
+        "student-small-cropped-A-epoch16/coreml-fp32/preprocess-v2 + opencv-expression-v1"
+      ],
+      "policies": [
+        "cpuOnly"
+      ],
+      "category_matches": 66,
+      "category_n": 72,
+      "age_group_matches": 46,
+      "age_group_n": 72,
+      "expression_matches": 53,
+      "expression_n": 72,
+      "known_age_n": 0,
+      "mae": null,
+      "within5": 0,
+      "interval_n": 0,
+      "interval_covers": 0,
+      "median_pipeline_ms": 138.234875001217,
+      "mean_pipeline_ms": 139.20245659685153,
+      "median_detection_ms": 84.26733333180891,
+      "group_breakdown": {
+        "plannedAgeGroup": {
+          "adult": {
+            "n": 48,
+            "age_group_matches": 22,
+            "category_matches": 42,
+            "expression_matches": 38
+          },
+          "elderly": {
+            "n": 24,
+            "age_group_matches": 24,
+            "category_matches": 24,
+            "expression_matches": 15
+          }
+        },
+        "referenceCategory": {
+          "female": {
+            "n": 36,
+            "age_group_matches": 22,
+            "category_matches": 30,
+            "expression_matches": 25
+          },
+          "male": {
+            "n": 36,
+            "age_group_matches": 24,
+            "category_matches": 36,
+            "expression_matches": 28
+          }
+        },
+        "referenceExpression": {
+          "angry": {
+            "n": 12,
+            "age_group_matches": 8,
+            "category_matches": 10,
+            "expression_matches": 8
+          },
+          "disgust": {
+            "n": 12,
+            "age_group_matches": 7,
+            "category_matches": 11,
+            "expression_matches": 10
+          },
+          "fear": {
+            "n": 12,
+            "age_group_matches": 7,
+            "category_matches": 11,
+            "expression_matches": 2
+          },
+          "happy": {
+            "n": 12,
+            "age_group_matches": 7,
+            "category_matches": 12,
+            "expression_matches": 12
+          },
+          "neutral": {
+            "n": 12,
+            "age_group_matches": 9,
+            "category_matches": 10,
+            "expression_matches": 11
+          },
+          "sad": {
+            "n": 12,
+            "age_group_matches": 8,
+            "category_matches": 12,
+            "expression_matches": 10
+          }
+        }
+      }
+    },
+    "utk-student-cpu": {
+      "selected": 40,
+      "successful": 40,
+      "failed": 0,
+      "models": [
+        "student-small-cropped-A-epoch16/coreml-fp32/preprocess-v2 (age/gender only)"
+      ],
+      "policies": [
+        "cpuOnly"
+      ],
+      "category_matches": 38,
+      "category_n": 40,
+      "age_group_matches": 32,
+      "age_group_n": 40,
+      "expression_matches": 0,
+      "expression_n": 0,
+      "known_age_n": 40,
+      "mae": 7.899630784988403,
+      "within5": 22,
+      "interval_n": 40,
+      "interval_covers": 36,
+      "median_pipeline_ms": 29.84572916830075,
+      "mean_pipeline_ms": 29.706907291438256,
+      "median_detection_ms": 10.917958334175637,
+      "group_breakdown": {
+        "plannedAgeGroup": {
+          "adult": {
+            "n": 20,
+            "age_group_matches": 19,
+            "category_matches": 20,
+            "expression_matches": 0
+          },
+          "elderly": {
+            "n": 20,
+            "age_group_matches": 13,
+            "category_matches": 18,
+            "expression_matches": 0
+          }
+        },
+        "referenceCategory": {
+          "female": {
+            "n": 20,
+            "age_group_matches": 15,
+            "category_matches": 18,
+            "expression_matches": 0
+          },
+          "male": {
+            "n": 20,
+            "age_group_matches": 17,
+            "category_matches": 20,
+            "expression_matches": 0
+          }
+        },
+        "referenceExpression": {
+          "unlabelled": {
+            "n": 40,
+            "age_group_matches": 32,
+            "category_matches": 38,
+            "expression_matches": 0
+          }
+        }
+      }
+    },
+    "utk-fastface-cpu": {
+      "selected": 40,
+      "successful": 40,
+      "failed": 0,
+      "models": [
+        "fastface-large-128@15240f03/coreml-fp32 (age/gender only)"
+      ],
+      "policies": [
+        "cpuOnly"
+      ],
+      "category_matches": 38,
+      "category_n": 40,
+      "age_group_matches": 36,
+      "age_group_n": 40,
+      "expression_matches": 0,
+      "expression_n": 0,
+      "known_age_n": 40,
+      "mae": 8.198627233505249,
+      "within5": 13,
+      "interval_n": 0,
+      "interval_covers": 0,
+      "median_pipeline_ms": 32.92133333161473,
+      "mean_pipeline_ms": 33.29838020799798,
+      "median_detection_ms": 10.8072083312436,
+      "group_breakdown": {
+        "plannedAgeGroup": {
+          "adult": {
+            "n": 20,
+            "age_group_matches": 18,
+            "category_matches": 20,
+            "expression_matches": 0
+          },
+          "elderly": {
+            "n": 20,
+            "age_group_matches": 18,
+            "category_matches": 18,
+            "expression_matches": 0
+          }
+        },
+        "referenceCategory": {
+          "female": {
+            "n": 20,
+            "age_group_matches": 18,
+            "category_matches": 18,
+            "expression_matches": 0
+          },
+          "male": {
+            "n": 20,
+            "age_group_matches": 18,
+            "category_matches": 20,
+            "expression_matches": 0
+          }
+        },
+        "referenceExpression": {
+          "unlabelled": {
+            "n": 40,
+            "age_group_matches": 36,
+            "category_matches": 38,
+            "expression_matches": 0
+          }
+        }
+      }
+    },
+    "final20-fastface-cpu": {
+      "selected": 20,
+      "successful": 20,
+      "failed": 0,
+      "models": [
+        "fastface-large-128@15240f03/coreml-fp32 + opencv-expression-v1"
+      ],
+      "policies": [
+        "cpuOnly"
+      ],
+      "category_matches": 20,
+      "category_n": 20,
+      "age_group_matches": 16,
+      "age_group_n": 20,
+      "expression_matches": 15,
+      "expression_n": 20,
+      "known_age_n": 7,
+      "mae": 14.948850631713867,
+      "within5": 1,
+      "interval_n": 0,
+      "interval_covers": 0,
+      "median_pipeline_ms": 46.110395836876705,
+      "mean_pipeline_ms": 45.31692499986093,
+      "median_detection_ms": 16.319708331138827,
+      "group_breakdown": {
+        "plannedAgeGroup": {
+          "adult": {
+            "n": 10,
+            "age_group_matches": 9,
+            "category_matches": 10,
+            "expression_matches": 8
+          },
+          "elderly": {
+            "n": 10,
+            "age_group_matches": 7,
+            "category_matches": 10,
+            "expression_matches": 7
+          }
+        },
+        "referenceCategory": {
+          "female": {
+            "n": 10,
+            "age_group_matches": 8,
+            "category_matches": 10,
+            "expression_matches": 7
+          },
+          "male": {
+            "n": 10,
+            "age_group_matches": 8,
+            "category_matches": 10,
+            "expression_matches": 8
+          }
+        },
+        "referenceExpression": {
+          "happy": {
+            "n": 10,
+            "age_group_matches": 7,
+            "category_matches": 10,
+            "expression_matches": 10
+          },
+          "sad": {
+            "n": 10,
+            "age_group_matches": 9,
+            "category_matches": 10,
+            "expression_matches": 5
+          }
+        }
+      }
+    },
+    "final20-fastface-all": {
+      "selected": 20,
+      "successful": 20,
+      "failed": 0,
+      "models": [
+        "fastface-large-128@15240f03/coreml-fp32 + opencv-expression-v1"
+      ],
+      "policies": [
+        "all"
+      ],
+      "category_matches": 20,
+      "category_n": 20,
+      "age_group_matches": 16,
+      "age_group_n": 20,
+      "expression_matches": 15,
+      "expression_n": 20,
+      "known_age_n": 7,
+      "mae": 14.948858533586774,
+      "within5": 1,
+      "interval_n": 0,
+      "interval_covers": 0,
+      "median_pipeline_ms": 55.576958333404036,
+      "mean_pipeline_ms": 58.08247500026482,
+      "median_detection_ms": 19.370541667740326,
+      "group_breakdown": {
+        "plannedAgeGroup": {
+          "adult": {
+            "n": 10,
+            "age_group_matches": 9,
+            "category_matches": 10,
+            "expression_matches": 8
+          },
+          "elderly": {
+            "n": 10,
+            "age_group_matches": 7,
+            "category_matches": 10,
+            "expression_matches": 7
+          }
+        },
+        "referenceCategory": {
+          "female": {
+            "n": 10,
+            "age_group_matches": 8,
+            "category_matches": 10,
+            "expression_matches": 7
+          },
+          "male": {
+            "n": 10,
+            "age_group_matches": 8,
+            "category_matches": 10,
+            "expression_matches": 8
+          }
+        },
+        "referenceExpression": {
+          "happy": {
+            "n": 10,
+            "age_group_matches": 7,
+            "category_matches": 10,
+            "expression_matches": 10
+          },
+          "sad": {
+            "n": 10,
+            "age_group_matches": 9,
+            "category_matches": 10,
+            "expression_matches": 5
+          }
+        }
+      }
+    },
+    "final20-student-all": {
+      "selected": 20,
+      "successful": 20,
+      "failed": 0,
+      "models": [
+        "student-small-cropped-A-epoch16/coreml-fp32/preprocess-v2 + opencv-expression-v1"
+      ],
+      "policies": [
+        "all"
+      ],
+      "category_matches": 14,
+      "category_n": 20,
+      "age_group_matches": 16,
+      "age_group_n": 20,
+      "expression_matches": 15,
+      "expression_n": 20,
+      "known_age_n": 7,
+      "mae": 16.756012507847377,
+      "within5": 1,
+      "interval_n": 7,
+      "interval_covers": 5,
+      "median_pipeline_ms": 52.51718750150758,
+      "mean_pipeline_ms": 59.64295833437063,
+      "median_detection_ms": 19.022083331947215,
+      "group_breakdown": {
+        "plannedAgeGroup": {
+          "adult": {
+            "n": 10,
+            "age_group_matches": 7,
+            "category_matches": 9,
+            "expression_matches": 8
+          },
+          "elderly": {
+            "n": 10,
+            "age_group_matches": 9,
+            "category_matches": 5,
+            "expression_matches": 7
+          }
+        },
+        "referenceCategory": {
+          "female": {
+            "n": 10,
+            "age_group_matches": 8,
+            "category_matches": 6,
+            "expression_matches": 7
+          },
+          "male": {
+            "n": 10,
+            "age_group_matches": 8,
+            "category_matches": 8,
+            "expression_matches": 8
+          }
+        },
+        "referenceExpression": {
+          "happy": {
+            "n": 10,
+            "age_group_matches": 8,
+            "category_matches": 9,
+            "expression_matches": 10
+          },
+          "sad": {
+            "n": 10,
+            "age_group_matches": 8,
+            "category_matches": 5,
+            "expression_matches": 5
+          }
+        }
+      }
+    },
+    "final20-fastface-cpuAndGPU": {
+      "selected": 20,
+      "successful": 20,
+      "failed": 0,
+      "category_matches": 20,
+      "age_group_matches": 16,
+      "expression_matches": 15,
+      "expression_n": 20,
+      "known_age_n": 7,
+      "interval_n": 0,
+      "median_pipeline_ms": 52.179083329974674,
+      "models": [
+        "fastface-large-128@15240f03/coreml-fp32 + opencv-expression-v1"
+      ],
+      "policies": [
+        "cpuAndGPU"
+      ],
+      "mae": 14.948858533586774,
+      "within5": 1,
+      "interval_covers": 0,
+      "category_n": 20,
+      "age_group_n": 20
+    },
+    "final20-student-cpuAndGPU": {
+      "selected": 20,
+      "successful": 20,
+      "failed": 0,
+      "category_matches": 14,
+      "age_group_matches": 16,
+      "expression_matches": 15,
+      "expression_n": 20,
+      "known_age_n": 7,
+      "interval_n": 7,
+      "median_pipeline_ms": 51.20516667375341,
+      "models": [
+        "student-small-cropped-A-epoch16/coreml-fp32/preprocess-v2 + opencv-expression-v1"
+      ],
+      "policies": [
+        "cpuAndGPU"
+      ],
+      "mae": 16.756012507847377,
+      "within5": 1,
+      "interval_covers": 5,
+      "category_n": 20,
+      "age_group_n": 20
+    }
+  },
+  "fastface_cpu_vs_all": {
+    "n": 20,
+    "max_age_prediction_difference": 3.4332275390625e-05,
+    "same_category_labels": 20,
+    "same_age_group_labels": 20,
+    "same_expression_labels": 20
+  }
+}

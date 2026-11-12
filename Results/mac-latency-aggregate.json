@@ -1,0 +1,73 @@
+{
+  "runs": [
+    {
+      "configuration": "fastface-cpu",
+      "timed_predictions": 100,
+      "images": 20,
+      "repeats": 5,
+      "median_ms": 57.050208328291774,
+      "mean_ms": 56.65526083379518,
+      "p95_ms": 76.12345833331347,
+      "min_ms": 30.07458330830559,
+      "max_ms": 84.21995834214613,
+      "cold_load_plus_first_inference_ms": 364.8547083721496,
+      "iphone_single_run_median_ms": 46.110395836876705,
+      "max_age_difference_mac_vs_iphone": 9.434127807617188,
+      "all_attribute_labels_match_phone": 90,
+      "attribute_agreement_with_phone": {
+        "age-group": 95,
+        "gender-category": 100,
+        "expression": 95
+      }
+    },
+    {
+      "configuration": "fastface-all",
+      "timed_predictions": 100,
+      "images": 20,
+      "repeats": 5,
+      "median_ms": 76.15408336278051,
+      "mean_ms": 75.89892083080485,
+      "p95_ms": 94.91829166654497,
+      "min_ms": 53.24962502345443,
+      "max_ms": 104.07458333065733,
+      "cold_load_plus_first_inference_ms": 5280.3102916223,
+      "iphone_single_run_median_ms": 55.576958333404036,
+      "max_age_difference_mac_vs_iphone": 9.434120178222656,
+      "all_attribute_labels_match_phone": 90,
+      "attribute_agreement_with_phone": {
+        "age-group": 95,
+        "gender-category": 100,
+        "expression": 95
+      }
+    },
+    {
+      "configuration": "student-all",
+      "timed_predictions": 100,
+      "images": 20,
+      "repeats": 5,
+      "median_ms": 75.75914583867416,
+      "mean_ms": 74.62868958129548,
+      "p95_ms": 91.10645833425224,
+      "min_ms": 37.05858328612521,
+      "max_ms": 99.9805000028573,
+      "cold_load_plus_first_inference_ms": 1303.6362083512358,
+      "iphone_single_run_median_ms": 52.51718750150758,
+      "max_age_difference_mac_vs_iphone": 40.73193359375,
+      "all_attribute_labels_match_phone": 70,
+      "attribute_agreement_with_phone": {
+        "age-group": 85,
+        "gender-category": 90,
+        "expression": 95
+      }
+    }
+  ],
+  "metadata": {
+    "physical_memory_bytes": 25769803776,
+    "platform": "Version 27.2 (Build 26B5091g)",
+    "processor_count": 10,
+    "repeats": 5,
+    "scope": "Native Mac Core ML with same FacePipeline code and image files; resource lookup only adapted. Not PyTorch source-runtime latency.",
+    "warmup": "one cold call, then one full 20-image pass per configuration"
+  },
+  "failed": 0
+}
