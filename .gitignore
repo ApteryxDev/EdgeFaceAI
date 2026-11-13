@@ -61,3 +61,7 @@ __pycache__/
 !Resources/ConversionFixtures/expected.json
 !Resources/ConversionFixtures/expression-expected.json
 !Resources/ConversionFixtures/age-interval-calibration.json
+
+# Public UI screenshots contain no participant photographs
+!docs/screenshots/app-controls.png
+!docs/screenshots/app-results.png

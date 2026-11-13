@@ -20,6 +20,21 @@ An iPhone research prototype built with SwiftUI, Vision and Core ML, with a stud
 
 </div>
 
+## In-app screenshots
+
+<table>
+<tr><th>1. Controls and conversion check</th><th>2. Recorded evaluation results</th></tr>
+<tr>
+<td valign="top"><img src="docs/screenshots/app-controls.png" alt="EdgeFace AI controls for input, model choice, age interval, compute policy, overlays and conversion checks" width="380"></td>
+<td valign="top"><img src="docs/screenshots/app-results.png" alt="Student model evaluation screen: 20 images processed, age-group agreement 80 percent, category agreement 70 percent, expression agreement 75 percent" width="500"><p>The app displays age-group, category and expression agreement, numerical-age error, interval coverage and pipeline time. These are recorded results on the project sample.</p><p>For a first test, follow the walkthrough below using <b>Photos</b> mode. The research galleries shown in the original screenshots are optional.</p></td>
+</tr>
+</table>
+
+*Real iPhone screenshots supplied by the student, cropped to show the interface and
+aggregate results without participant photographs. Displayed values are unchanged.
+The controls screenshot shows the original five-input student conversion check;
+the public demo includes three synthetic inputs and reports that count instead.*
+
 ## Start here — instructor walkthrough
 
 **What you need:** a **Mac with Xcode**. The app and all three models are included;
