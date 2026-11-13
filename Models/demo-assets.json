@@ -1,0 +1,23 @@
+{
+  "description": "Exact demo models and public synthetic fixtures; no participant images.",
+  "sha256": {
+    "Models/FastFaceAttributes.mlpackage/Data/com.apple.CoreML/model.mlmodel": "9a9c2a369bf4538e01fb3b83964a7e51aa3a1fe2d8936603f9fcf9ddf1d4a04b",
+    "Models/FastFaceAttributes.mlpackage/Data/com.apple.CoreML/weights/weight.bin": "a4dcbc4e3123c05834a2dd1e06e57dc57d4bb19851b6df9713d870a1399aab2f",
+    "Models/FastFaceAttributes.mlpackage/Manifest.json": "c9ae749f67919c5d7a37215e378ff643de76eb2c654db7b96c048717d9826d12",
+    "Models/OpenCVExpression.mlpackage/Data/com.apple.CoreML/model.mlmodel": "ecc2cdd561c7742fcd428d29426e4230227dd34ea7c553b27a5db277322b8987",
+    "Models/OpenCVExpression.mlpackage/Data/com.apple.CoreML/weights/weight.bin": "9ebd296ad48d0576c63b95d8988112d827ef6d714e71a5892121b93497ab9eec",
+    "Models/OpenCVExpression.mlpackage/Manifest.json": "e3250219f223c579740a3bbf27a1288ccd7e8ee23ec88faef033380b2430fb41",
+    "Models/StudentAttributes.mlpackage/Data/com.apple.CoreML/model.mlmodel": "66d594bdb428fa3a60e2779d00a15381568e5ebe0aa20ae8c83f318f2afd4235",
+    "Models/StudentAttributes.mlpackage/Data/com.apple.CoreML/weights/weight.bin": "2a2a2b8d23911ce158b87e1a186c0487a807a403644fd8fe6f0a1718090ea8f6",
+    "Models/StudentAttributes.mlpackage/Manifest.json": "a0e5be1a3ae5b1ee83fb63a4e901066ebaccfecbdb0196bd2a5b7a8565676ec2",
+    "Resources/ConversionFixtures/age-interval-calibration.json": "9b63ec298dc226ec2510c59547c353699ff0a0d3eb5f0553a5ac7146664b4c3c",
+    "Resources/ConversionFixtures/black.png": "dbd8e6235a1dba90a6d5e5199db421b6e9f037d56643d2ddec01b18afb7ae64a",
+    "Resources/ConversionFixtures/expected.json": "a26452bf9c9ff7021699d36622277c562260735781ba0ba8ff1cb1b86880aff4",
+    "Resources/ConversionFixtures/expression-black.png": "3258173cd434a67e436bbe6f726bc73349568e560c95087a5da74b20b8316582",
+    "Resources/ConversionFixtures/expression-expected.json": "d9705f25a705aaed4dbeeb70e521bb8956faa5f5ad89f32332c25d391a6e472d",
+    "Resources/ConversionFixtures/expression-random.png": "290eeae28b042996d9b36a4d57f487352362f61df78b4318703b388b544bbff5",
+    "Resources/ConversionFixtures/expression-white.png": "67357de21f5a8a14f01ec0a1b5244d7249a26ea3e072441b141eec0b59faafb1",
+    "Resources/ConversionFixtures/random.png": "4e369ca1e010c3bc15968c6a77e800dda0d6b217dc01bd6863123f8801f2b300",
+    "Resources/ConversionFixtures/white.png": "ef66840596f664535126428db67dad9cd7a17be6922d606f40ca0452e4cc8965"
+  }
+}

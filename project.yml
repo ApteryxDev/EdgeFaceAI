@@ -23,10 +23,12 @@ targets:
       - path: Resources/FACESDevelopment
         type: folder
         buildPhase: resources
-      - path: Models
-        excludes:
-          - AgeClassifier.mlmodel
-          - GenderClassifier.mlmodel
+      - path: Resources/InternetCandidates
+        type: folder
+        buildPhase: resources
+      - path: Models/StudentAttributes.mlpackage
+      - path: Models/FastFaceAttributes.mlpackage
+      - path: Models/OpenCVExpression.mlpackage
     settings:
       base:
         PRODUCT_BUNDLE_IDENTIFIER: edu.student.edgefaceai

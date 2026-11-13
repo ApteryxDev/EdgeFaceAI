@@ -71,7 +71,11 @@ actor FacePipeline {
     private var cachedExpressionName: String?
     private var conservativeAgeRadius: Double?
     // which model the pickers currently point at
-    private var selectedExpressionName: String { UserDefaults.standard.string(forKey: "expressionModel") == "legacy" ? "ExpressionClassifier" : "OpenCVExpression" }
+    private var selectedExpressionName: String {
+        let legacyAvailable = Bundle.main.url(forResource: "ExpressionClassifier", withExtension: "mlmodelc") != nil
+        return UserDefaults.standard.string(forKey: "expressionModel") == "legacy" && legacyAvailable
+            ? "ExpressionClassifier" : "OpenCVExpression"
+    }
     private var selectedModelName: String { UserDefaults.standard.string(forKey: "attributeModel") == "fastface" ? "FastFaceAttributes" : "StudentAttributes" }
     private var attributes: MLModel?
     private var expression: VNCoreMLModel?

@@ -44,3 +44,20 @@ __pycache__/
 # Public diagrams contain no participant photographs or individual records
 !docs/figures/method.png
 !docs/figures/final20-agreement.png
+
+# Self-contained academic demo: explicit model and synthetic-resource allowlist
+!Models/StudentAttributes.mlpackage/
+!Models/StudentAttributes.mlpackage/**
+!Models/FastFaceAttributes.mlpackage/
+!Models/FastFaceAttributes.mlpackage/**
+!Models/OpenCVExpression.mlpackage/
+!Models/OpenCVExpression.mlpackage/**
+!Resources/ConversionFixtures/black.png
+!Resources/ConversionFixtures/white.png
+!Resources/ConversionFixtures/random.png
+!Resources/ConversionFixtures/expression-black.png
+!Resources/ConversionFixtures/expression-white.png
+!Resources/ConversionFixtures/expression-random.png
+!Resources/ConversionFixtures/expected.json
+!Resources/ConversionFixtures/expression-expected.json
+!Resources/ConversionFixtures/age-interval-calibration.json

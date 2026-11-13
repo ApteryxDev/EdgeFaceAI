@@ -198,45 +198,34 @@ EdgeFaceAI/
 └── README.md
 ```
 
-Participant photos, individual face-analysis records, private reference manifests, model weights and the report containing a matriculation number are not published. The private coursework submission retains the full evidence and executed analysis notebook.
+Participant photos, individual face-analysis records, private reference manifests and the report containing a matriculation number are not published. Three converted model packages are included for academic reproduction; legacy weights and training checkpoints are omitted. The private coursework submission retains the full evidence and executed analysis notebook.
 
 ---
 
 ## 🚀 Installation and Setup
 
-```bash
+The three converted Core ML models and synthetic self-check resources are included.
+**No retraining, dataset download or Python ML installation is needed to try the app.**
+
+```sh
 git clone https://github.com/ApteryxDev/EdgeFaceAI.git
 cd EdgeFaceAI
-
-python3 -m venv .venv
-source .venv/bin/activate
-python -m pip install -r Training/requirements.txt
-python -m pip install -r Conversion/requirements.txt
+python3 Scripts/verify-assets.py
+open EdgeFaceAI.xcodeproj
 ```
 
-The project was developed with **Xcode 27.2**, an **iPhone Air** and an **iOS 17 deployment target**.
+Select the **EdgeFaceAI** scheme and an iPhone simulator, then press Run. The app
+opens in **Photos** mode: select a clear single-face photograph and tap
+**Analyze photo on device**. For live camera, connect an iPhone, select your own
+signing team in Xcode, and choose Camera in the app. A Mac with full Xcode is required;
+development uses Xcode 27.2 and targets iOS 17 or later.
 
-> [!IMPORTANT]
-> Cloning this repository is not enough to build the app. Model binaries and authorised gallery/fixture resources must be supplied locally. Some legacy build references must also be supplied or removed. The complete requirements and sequence are in **[Build and reproduction instructions](docs/SETUP.md)**.
+Research galleries are optional and appear when installed. Private images/manifests
+are not included. Both model-conversion buttons work with bundled synthetic inputs.
 
-Once those assets are available, open `EdgeFaceAI.xcodeproj`, select your signing team and run on a trusted iPhone.
-
-<details>
-<summary><b>💻 Compile the native Mac benchmark</b></summary>
-
-With the required local models and frozen gallery present, run from the repository root:
-
-```bash
-mkdir -p .build
-swiftc -O App/FaceAlignment.swift Benchmark/FacePipeline.swift Benchmark/Benchmark.swift -o .build/mac-benchmark
-.build/mac-benchmark "$PWD" "$PWD/private-data/mac-latency"
-```
-
-The successful recorded benchmark ran as a native Xcode command-line tool without debugger attachment. The original automation environment restricted command-line Core ML/Vision execution; see [setup notes](docs/SETUP.md#native-mac-benchmark).
-
-</details>
-
----
+- [Complete quick start and troubleshooting](docs/SETUP.md)
+- [Bundled model provenance and terms](Models/THIRD_PARTY_NOTICES.md)
+- Build check without signing: `bash Scripts/check-build.sh`
 
 ## 🤝 Contributions and AI Assistance
 

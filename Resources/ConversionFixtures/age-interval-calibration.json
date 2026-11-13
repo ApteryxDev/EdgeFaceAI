@@ -1,0 +1,34 @@
+{
+  "method": "maximum of calibration-only 80% residual quantiles across prespecified reference-age/category strata; single conservative radius, no runtime reference label needed",
+  "target_coverage": 0.8,
+  "original_radius_years": 8.773700714111328,
+  "candidate_radius_years": 16.521652221679688,
+  "strata": {
+    "under18": {
+      "examples": 415,
+      "radius_years": 4.969738006591797,
+      "coverage_original_radius": 0.891566265060241
+    },
+    "adult-female": {
+      "examples": 807,
+      "radius_years": 7.822479248046875,
+      "coverage_original_radius": 0.8376703841387856
+    },
+    "adult-male": {
+      "examples": 914,
+      "radius_years": 9.224159240722656,
+      "coverage_original_radius": 0.7844638949671773
+    },
+    "older-female": {
+      "examples": 86,
+      "radius_years": 16.521652221679688,
+      "coverage_original_radius": 0.5348837209302325
+    },
+    "older-male": {
+      "examples": 102,
+      "radius_years": 15.050262451171875,
+      "coverage_original_radius": 0.49019607843137253
+    }
+  },
+  "limitations": "Wider intervals, not better age predictions. Finite-sample coverage requires exchangeability; correlated identities and deployment shift remain. Not tuned to the 40-image development results."
+}

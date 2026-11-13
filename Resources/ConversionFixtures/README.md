@@ -1,1 +1,1 @@
-Local authorised resources are required here. Participant images, reference manifests and individual face-analysis records are not published. See the repository README for the required data and model setup.
+Public conversion checks use six synthetic black/white/random images, source-runtime expected outputs, and aggregate calibration statistics. No face photographs are included. The student check includes only three synthetic inputs; the two UTKFace inputs from the original private five-input check are omitted. These checks test conversion, not recognition accuracy.

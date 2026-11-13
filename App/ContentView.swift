@@ -33,7 +33,7 @@ struct ContentView: View {
     @StateObject private var utkStudy = FACESStudy(resourceFolder: "UTKDevelopment", datasetTitle: "UTKFace",
         datasetDescription: "40 randomly selected images · balanced adult/elderly and male/female categories",
         expectedCount: 40)
-    @State private var inputMode = InputMode.live
+    @State private var inputMode = InputMode.photo
     @State private var selection: PhotosPickerItem?
     @State private var imageData: Data?
     @State private var policy = ComputePolicy.all
@@ -50,6 +50,10 @@ struct ContentView: View {
     // locks the pickers while something is running, otherwise the model changes mid-analysis
     private var locked: Bool { busy || internetRunning || camera.running || camera.starting || facesStudy.running || utkStudy.running }
 
+    private func hasResource(_ name: String, in folder: String) -> Bool {
+        Bundle.main.url(forResource: name, withExtension: "json", subdirectory: folder) != nil
+    }
+
     var body: some View {
         NavigationStack {
             Form {
@@ -58,9 +62,9 @@ struct ContentView: View {
                     Picker("Input", selection: $inputMode) {
                         Text("Camera").tag(InputMode.live)
                         Text("Photos").tag(InputMode.photo)
-                        Text("FACES 72").tag(InputMode.faces)
-                        Text("UTK 40").tag(InputMode.utk)
-                        Text("On device / Web").tag(InputMode.internet)
+                        if !facesStudy.examples.isEmpty { Text("FACES 72").tag(InputMode.faces) }
+                        if !utkStudy.examples.isEmpty { Text("UTK 40").tag(InputMode.utk) }
+                        if hasResource("manifest", in: "InternetCandidates") { Text("On device / Web").tag(InputMode.internet) }
                     }
                     .pickerStyle(.menu)
                     .disabled(locked)
@@ -72,7 +76,9 @@ struct ContentView: View {
                     // expression runs as a separate second model
                     Picker("Expression model", selection: $expressionModel) {
                         Text("OpenCV candidate").tag("opencv")
-                        Text("Legacy baseline").tag("legacy")
+                        if Bundle.main.url(forResource: "ExpressionClassifier", withExtension: "mlmodelc") != nil {
+                            Text("Legacy baseline").tag("legacy")
+                        }
                     }.disabled(locked)
                     // interval policy only affects the student model, the baseline has no calibration
                     Picker("Age interval", selection: $ageIntervalPolicy) {
@@ -162,6 +168,11 @@ struct ContentView: View {
                 }
             }
             .navigationTitle("EdgeFace AI")
+        }
+        .onAppear {
+            if Bundle.main.url(forResource: "ExpressionClassifier", withExtension: "mlmodelc") == nil {
+                expressionModel = "opencv"
+            }
         }
         // switching the source shuts down whatever the previous source had running
         .onChange(of: inputMode) { _, mode in

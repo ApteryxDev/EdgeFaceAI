@@ -11,7 +11,6 @@
 		000000000000000000000014 /* EdgeFaceApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 00000000000000000000000A /* EdgeFaceApp.swift */; };
 		000000000000000000000015 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 00000000000000000000000B /* ContentView.swift */; };
 		000000000000000000000016 /* FacePipeline.swift in Sources */ = {isa = PBXBuildFile; fileRef = 00000000000000000000000C /* FacePipeline.swift */; };
-000000000000000000000138 = {isa = PBXBuildFile; fileRef = 00000000000000000000012E; };
 0000000000000000000001A1 = {isa = PBXBuildFile; fileRef = 0000000000000000000001A0; };
 0000000000000000000001B1 = {isa = PBXBuildFile; fileRef = 0000000000000000000001B0; };
 0000000000000000000001C1 = {isa = PBXBuildFile; fileRef = 0000000000000000000001C0; };
@@ -32,9 +31,6 @@
 		00000000000000000000000B /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
 		00000000000000000000000C /* FacePipeline.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FacePipeline.swift; sourceTree = "<group>"; };
 		00000000000000000000001E /* EdgeFaceAI.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; path = EdgeFaceAI.app; sourceTree = BUILT_PRODUCTS_DIR; };
-00000000000000000000012C = {isa = PBXFileReference; lastKnownFileType = file.mlmodel; path = AgeClassifier.mlmodel; sourceTree = "<group>"; };
-00000000000000000000012D = {isa = PBXFileReference; lastKnownFileType = file.mlmodel; path = GenderClassifier.mlmodel; sourceTree = "<group>"; };
-00000000000000000000012E = {isa = PBXFileReference; lastKnownFileType = file.mlmodel; path = ExpressionClassifier.mlmodel; sourceTree = "<group>"; };
 0000000000000000000001A0 = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LiveCamera.swift; sourceTree = "<group>"; };
 0000000000000000000001B0 = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FaceLandmarks.swift; sourceTree = "<group>"; };
 0000000000000000000001C0 = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FaceAlignment.swift; sourceTree = "<group>"; };
@@ -103,9 +99,6 @@
 000000000000000000000260,
 000000000000000000000240,
 0000000000000000000001D0,
-00000000000000000000012C,
-00000000000000000000012D,
-00000000000000000000012E,
 			);
 			path = Models;
 			sourceTree = "<group>";
@@ -184,7 +177,6 @@
 0000000000000000000001C1,
 0000000000000000000001B1,
 0000000000000000000001A1,
-000000000000000000000138,
 				000000000000000000000014 /* EdgeFaceApp.swift in Sources */,
 				000000000000000000000015 /* ContentView.swift in Sources */,
 				000000000000000000000016 /* FacePipeline.swift in Sources */,

@@ -1,22 +1,77 @@
-# Build and reproduce EdgeFace AI
+# Run EdgeFace AI
 
+The repository includes the three converted Core ML models and synthetic
+self-check/calibration resources. No model download, Python ML environment, dataset
+installation, XcodeGen or retraining is needed for the default app.
 
-The project was developed with Xcode 27.2, an iPhone Air and an iOS 17 deployment target. The exported source is not a self-contained app build: the local model binaries and authorised image resources below must first be supplied.
+## Requirements
 
-1. Obtain the original datasets under their source terms. UTKFace: https://susanqq.github.io/UTKFace/ . FACES: https://faces.mpdl.mpg.de/ . Do not assume restricted participant imagery can be redistributed.
-2. Install the training/conversion dependencies in a Python virtual environment using `Training/requirements.txt` and `Conversion/requirements.txt`. Preserve the model versions/provenance documented under `Models/`.
-3. Inspect each script's command-line options. Prepare grouped splits with `Training/prepare_utk.py`, train using `Training/train_student.py`, then calibrate and explicitly evaluate the frozen test using `Training/calibrate_and_evaluate.py`. Training uses ImageNet initialisation; it does not use FastFace age/category weights. Model-specific source assets must be obtained separately before conversion.
-4. Run the appropriate conversion scripts from `Conversion/`. The app expects `StudentAttributes.mlpackage`, `FastFaceAttributes.mlpackage`, `OpenCVExpression.mlpackage` and the optional legacy `ExpressionClassifier.mlmodel` in `Models/`. The project also retains legacy age/category model references, which require local originals or removal of those unused build references.
-5. Prepare authorised gallery manifests/images under the matching `Resources/` folders. FACES and UTK study drivers expect 72 and 40 images respectively. Personal/web gallery entries use `id`, `filename`, `source` and optional reference/crop metadata. Private manifests are deliberately omitted.
-6. Prepare `Resources/ConversionFixtures/` with `prepare_parity_fixtures.py`, the expression fixtures from its converter, and the calibrated interval JSON. Model availability and conversion should be verified rather than silently substituted.
-7. Open `EdgeFaceAI.xcodeproj`, set your own signing team, connect a trusted iPhone and run. Do not reuse another developer's signing identity. The app reports missing models and malformed resources explicitly.
+- A Mac with full Xcode and an installed iOS SDK. Development uses Xcode 27.2;
+  deployment target: iOS 17. Older Xcode versions are unverified.
+- For live camera: an iPhone running iOS 17 or later, a trusted connection,
+  Developer Mode and your own Xcode signing team.
+- A simulator supports the interface and photo selection. Add a single-face image
+  you have permission to use to its Photos app. Camera/device timing evaluation
+  requires real hardware.
 
-The `age-interval-calibration.json` conservative radius must be produced from the retained calibration audit before selecting the conservative interval. An image crop alone is not a UTK pre-cropped training chip; ordinary inputs still use Vision alignment.
+## Quick start
 
+```sh
+git clone https://github.com/ApteryxDev/EdgeFaceAI.git
+cd EdgeFaceAI
+python3 Scripts/verify-assets.py
+open EdgeFaceAI.xcodeproj
+```
 
-## Native Mac benchmark
+1. Choose the shared **EdgeFaceAI** scheme.
+2. Select an installed iPhone simulator and press Run, or select your connected iPhone.
+   On iPhone, open target **Signing & Capabilities**, select your own team and use
+   a unique bundle identifier if required.
+3. The app opens in **Photos** mode. Select a clear photograph containing exactly one
+   face, then tap **Analyze photo on device**. Results appear beneath the image.
+4. Compare **My trained model** and **FastFace baseline**. Both use the included OpenCV
+   expression model.
+5. On a physical iPhone, select **Camera**, tap **Start camera**, and grant camera
+   access if prompted. Frames are processed locally and are not recorded as video.
+6. The two **Check ... conversion** buttons run bundled synthetic fixtures. Passing
+   validates those fixed inputs, not recognition accuracy. The public student check
+   uses three synthetic inputs; the original private report also tested two UTK images.
 
-With local assets available, compile the benchmark from the repository root:
+No signing identity or credentials are shared. Use your own team for a physical device.
+
+## Check the build without signing
+
+```sh
+bash Scripts/check-build.sh
+```
+
+This verifies file hashes, builds for a generic iOS simulator and checks the resulting
+bundle for compiled models and calibration/fixture files. It does not claim a simulator
+launch or a physical-device inference test.
+
+## Optional research galleries
+
+FACES, UTK40 and the personal/web gallery are optional. Their pickers appear when local
+resources are available. None is needed for photo or live-camera inference.
+No participant photographs or private reference manifests are published.
+
+For authorised research reproduction, place the original local resources under
+`Resources/FACESDevelopment`, `Resources/UTKDevelopment` and `Resources/InternetCandidates`.
+FACES and UTK drivers validate 72 and 40 images respectively, unique identifiers and
+matching image files. Formats are defined by `FACESExample` and `InternetAgeExample`
+in the app source. Folder references bundle authorised resources added before building.
+Do not commit private images or manifests.
+
+## Optional training and conversion
+
+Only needed to reproduce or change weights. Install `Training/requirements.txt` and
+`Conversion/requirements.txt` in a separate Python environment. Obtain datasets and
+upstream assets under their source terms. Use `Training/prepare_utk.py`,
+`Training/train_student.py` and `Training/calibrate_and_evaluate.py`; inspect each
+script's `--help` and the retained training configuration. Converters are in `Conversion/`.
+Retraining may not produce identical weights on a different platform.
+
+## Optional Mac benchmark
 
 ```sh
 mkdir -p .build
@@ -24,7 +79,16 @@ swiftc -O App/FaceAlignment.swift Benchmark/FacePipeline.swift Benchmark/Benchma
 .build/mac-benchmark "$PWD" "$PWD/private-data/mac-latency"
 ```
 
-The original automation environment restricted Core ML/Vision command-line execution. A native Xcode command-line tool without debugger attachment was used for the successful benchmark. The runner compiles local model packages if needed; real model files and the private frozen gallery are required.
+The research benchmark requires the private frozen gallery. It is separate from the
+demo quick start. Published aggregate measurements remain under `Results/`.
 
+## Troubleshooting
 
-[Return to the project overview](../README.md)
+- **Missing model/checksum failure:** obtain a complete checkout including `Models/`.
+  Restore recorded artifacts instead of substituting weights.
+- **Signing error:** select your own team and an available bundle identifier.
+- **No face/multiple faces:** select an image with exactly one clear face.
+- **No simulator camera:** use Photos mode or a physical iPhone.
+- **Galleries absent:** expected when optional research data is not installed.
+
+Model provenance and terms: [THIRD_PARTY_NOTICES.md](../Models/THIRD_PARTY_NOTICES.md).
