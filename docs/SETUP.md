@@ -1,5 +1,7 @@
 # Run EdgeFace AI
 
+For a first review, start with the numbered [instructor walkthrough](../README.md#start-here--instructor-walkthrough) at the top of the README.
+
 The repository includes the three converted Core ML models and synthetic
 self-check/calibration resources. No model download, Python ML environment, dataset
 installation, XcodeGen or retraining is needed for the default app.

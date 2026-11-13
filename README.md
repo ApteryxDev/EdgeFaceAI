@@ -20,6 +20,65 @@ An iPhone research prototype built with SwiftUI, Vision and Core ML, with a stud
 
 </div>
 
+## Start here — instructor walkthrough
+
+**What you need:** a **Mac with Xcode**. The app and all three models are included;
+**no training or dataset download is required**. Use the Simulator for photo testing,
+or an iPhone for the live camera.
+
+### 1. Download and open
+
+On this page choose **Code → Download ZIP**, unzip it, then double-click
+**EdgeFaceAI.xcodeproj**. Alternatively, use Terminal:
+
+```sh
+git clone https://github.com/ApteryxDev/EdgeFaceAI.git
+cd EdgeFaceAI
+open EdgeFaceAI.xcodeproj
+```
+
+### 2. Choose where to run
+
+At the top of Xcode, select the **EdgeFaceAI** scheme and an installed **iPhone
+Simulator** (for example, iPhone 18 Pro). Press the **▶ Run** button or **⌘R**.
+Wait for the build and device startup to finish. Simulator builds do not require
+an Apple signing team. Development/build verification uses Xcode 27.2; iOS 17 is
+the deployment target.
+
+**Using a real iPhone instead?** Connect and trust it, enable Developer Mode, select
+it as the run destination, and choose **your own team** in the target's
+**Signing & Capabilities** tab. Use a unique bundle identifier if Xcode requests one.
+Then press Run. These signing steps are unnecessary for the Simulator.
+
+### 3. Try a photograph
+
+1. In Simulator, open **Photos** and add a single-face image you have permission to
+   use by dragging the image file onto the Simulator. On an iPhone, use an existing photo.
+2. Open **EdgeFace AI**, keep **Input → Photos**, and tap **Select photo**.
+3. Select the image, then tap **Analyze photo on device**.
+4. Scroll below the image to inspect the age estimate, dataset category, expression,
+   model scores and pipeline time. The app requires exactly **one face**.
+
+### 4. Compare the models and check conversion
+
+- In **Age and category model**, switch between **My trained model** and
+  **FastFace baseline**, then analyze the same image again.
+- Keep **Expression model → OpenCV candidate**. The expression model is shared.
+- Tap **Check student model conversion** and **Check expression model conversion**
+  separately. Each runs three bundled synthetic inputs and reports PASS/FAIL.
+  These are numerical conversion checks, not recognition-accuracy measurements.
+- Use **Export saved results** to save the predictions as JSON before closing.
+
+### 5. Try live video (physical iPhone)
+
+Change **Input → Camera**, tap **Start camera**, and allow camera access when
+prompted. Keep one face in view. Stop the camera before changing models or lenses.
+Live camera testing needs a physical iPhone; use Photos mode in Simulator.
+
+**Need help?** [Detailed setup and troubleshooting](docs/SETUP.md) ·
+[Build verification](docs/BUILD_VERIFICATION.md) ·
+[Model provenance](Models/THIRD_PARTY_NOTICES.md)
+
 ---
 
 ## 📖 Overview
