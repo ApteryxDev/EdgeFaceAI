@@ -1,0 +1,14 @@
+{
+  "source": "https://github.com/opencv/opencv_zoo/tree/main/models/facial_expression_recognition",
+  "model_file_commit": "3c4f8c9308075d22f148f74b9306f0222a9aeb30",
+  "onnx_sha256": "4f61307602fc089ce20488a31d4e4614e3c9753a7d6c41578c854858b183e1a9",
+  "source_model_bytes": 4791892,
+  "license": "Apache-2.0 per OpenCV directory README; license retained",
+  "normalization": "RGB112; x/127.5-1",
+  "alignment": "standard112 five-point template. Vision landmarks approximate source YuNet landmarks.",
+  "label_mapping": {
+    "fearful": "fear",
+    "surprised": "surprise"
+  },
+  "status": "Candidate integrated and Xcode launch confirmed; device parity and recognition comparison pending"
+}
