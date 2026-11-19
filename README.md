@@ -337,6 +337,10 @@ ChatGPT and Codex assisted throughout. The code and prose are not represented as
 
 See the retained provenance and third-party licences under [`Models/`](Models/). This repository does not replace the underlying model or data rights.
 
+## 📄 License
+
+My own code and documentation are released under the [MIT License](LICENSE). The model files and weights under [`Models/`](Models/) keep their original licences, listed in [`THIRD_PARTY_NOTICES.md`](Models/THIRD_PARTY_NOTICES.md), and the MIT License does not apply to them or to the datasets.
+
 ---
 
 <div align="center">
